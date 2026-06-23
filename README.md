@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# SNSアイコンメーカー
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+プロフィール画像をブラウザ上で切り抜いて、SNS用のアイコン画像を作成できるツールです。
 
-Currently, two official plugins are available:
+## 機能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 画像のアップロード（クリックまたはドラッグ&ドロップ）
+- 画像のドラッグ移動・ズーム（マウスホイール・スライダー）
+- 丸く切り抜いて透明背景でPNG保存
+- 四角く切り抜いてPNG保存（400×400px）
+- 中央ガイド線表示
 
-## React Compiler
+## 使い方
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. 画像をアップロード
+2. ドラッグで位置調整、ホイールまたはスライダーでサイズ調整
+3. 「透明背景で丸く保存」または「四角く切り抜いて保存」をクリック
 
-## Expanding the Oxlint configuration
+## 技術スタック
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Lucide Icons
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## ローカルで実行
+
+```bash
+npm install
+npm run dev
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
